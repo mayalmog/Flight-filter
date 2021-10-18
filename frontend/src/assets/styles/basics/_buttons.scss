@@ -1,0 +1,26 @@
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0 0.75rem;
+    margin: 0 0.75rem;
+    // font-size: 1.25rem;
+    font-size: rem(25px);
+    line-height: 1;
+    border-radius: 6px;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    &:hover {
+        background-color: rgb(209, 205, 165);
+    }
+}

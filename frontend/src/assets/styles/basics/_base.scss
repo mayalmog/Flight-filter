@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+        sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    font-size: rem(18px);
+    margin: 0;
+    max-width: 1024px;
+    margin: auto;
+    background: lightblue url("../../img/paper-airplane-08.jpg") no-repeat fixed center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #383838;
+}
+
+section,
+main,
+footer {
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

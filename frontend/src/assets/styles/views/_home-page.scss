@@ -1,0 +1,19 @@
+.homepage {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    .homepage-flights {
+        align-self: center;
+        margin: 10px;
+        @media (min-width: 900px) {
+            flex-direction: row;
+        }
+    }
+
+    .flight-preview {
+        background-color: rgba(206, 204, 204, 0.541);
+        border-radius: 10px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
