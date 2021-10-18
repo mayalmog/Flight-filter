@@ -12,13 +12,6 @@ async function query() {
         filteredFlights = flights.data.data.filter(flight =>
             (new Date(flight.departure.scheduled).getTime() > (startTime))
             && (new Date(flight.departure.scheduled).getTime() < (startTime + (7200000))))
-        // (new Date(flight.departure.scheduled).getTime() > (startTime + 10800000))// In 3 hours- usually does not return any flights.
-        // && (new Date(flight.departure.scheduled).getTime() < (startTime + (10800000 + 7200000))))//Until 5 hours from now.usually does not return any flights.
-
-        //FOR DEBUGGING:
-        // let sortedFlights = flights.data.data.map(flight => (Date.parse(new Date(flight.departure.scheduled)))).sort((a, b) => a - b)
-        // sortedFlights = sortedFlights.map(flightTimestamp => new Date(flightTimestamp).toLocaleString("en-US", { timeZone: 'America/New_York' }))
-        // console.log('sorted flights: ', sortedFlights);
 
         filteredFlights = filteredFlights.map(flight =>
         ({
