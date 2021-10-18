@@ -1,9 +1,5 @@
 import React from 'react'
-// import { connect } from 'react-redux'
-// import { Link, Route, BrowserRouter as Router } from 'react-router-dom'
 
-// import { FlightPreview } from '../cmps/flight-preview'
-// import { loadFlights } from '../store/flight.actions'
 import { flightService } from '../services/flight.service'
 
 export class HomePage extends React.Component {
@@ -16,7 +12,6 @@ export class HomePage extends React.Component {
 
     async componentDidMount() {
         this.startClock()
-        flightService.query()
         try {
             const flights = await flightService.query()
             this.setState(prevState => ({ ...prevState, flights }))
@@ -47,8 +42,8 @@ export class HomePage extends React.Component {
         const { time, flights, showFlights } = this.state
         const today = new Date(Date.now());
         const todayFormatted = today.toISOString().substring(0, 10)
-        const startTime = new Date(Date.now() + 10800000).toLocaleTimeString("en-US", { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' })
-        const endTime = new Date(Date.now() + 10800000 + 7200000).toLocaleTimeString("en-US", { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' })
+        const startTime = new Date(Date.now()).toLocaleTimeString("en-US", { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' })
+        const endTime = new Date(Date.now() + 3600000).toLocaleTimeString("en-US", { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' })
         return (
             <section className="homepage flex column">
                 <h1>Current Time in JFK: {time}</h1>
@@ -72,13 +67,3 @@ export class HomePage extends React.Component {
         )
     }
 }
-
-// function mapStateToProps(state) {
-//     return {
-//     }
-// }
-
-// const mapDispatchToProps = {
-// }
-
-// export const HomePage = connect(mapStateToProps, mapDispatchToProps)(_HomePage)
